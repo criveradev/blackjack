@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c3029" />
+    <meta
+      name="description"
+      content="Una mesa de blackjack para jugar contra la computadora. Acércate a 21 sin pasarte."
+    />
+
+    <title>Blackjack — La mesa está lista</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="Blackjack, inicio">
+          <span class="brand-mark" aria-hidden="true">♠</span>
+          <span
+            >BLACKJACK<span class="brand-caption"
+              >EL CLÁSICO DE LA MESA</span
+            ></span
+          >
+        </a>
+        <div class="topbar-right">
+          <span class="practice"><i></i> Modo práctica</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">UN POCO DE SUERTE. UNA BUENA DECISIÓN.</p>
+            <h1 id="page-title">
+              Tu próxima carta<br class="mobile-break" />
+              lo cambia todo<span>.</span>
+            </h1>
+            <p class="intro">
+              Acércate a 21. Confía en tu jugada. Disfruta la partida.
+            </p>
+          </div>
+          <div class="session-stat">
+            <span class="stat-icon" aria-hidden="true">♧</span>
+            <div><strong id="wins">00</strong><span>VICTORIAS</span></div>
+          </div>
+        </section>
+
+        <div class="game-layout">
+          <section class="table-panel" aria-label="Mesa de blackjack">
+            <div class="table-meta">
+              <span><i></i> MESA 01</span
+              ><span
+                >MODO PRÁCTICA <b aria-hidden="true">·</b> BARAJA
+                FRANCESA</span
+              >
+            </div>
+            <section class="hand-section dealer" aria-labelledby="dealer-title">
+              <div class="hand-heading">
+                <div class="participant">
+                  <span class="avatar" aria-hidden="true">♠</span>
+                  <div>
+                    <h2 id="dealer-title">Computadora</h2>
+                    <p>La banca se planta en 17</p>
+                  </div>
+                </div>
+                <div class="score">
+                  <span>PUNTOS</span><strong id="dealer-score">—</strong>
+                </div>
+              </div>
+              <div class="cards" id="dealer-cards"></div>
+            </section>
+            <div class="table-divider" aria-hidden="true">
+              <span></span>
+              <div>♠ <small>21</small> ♠</div>
+              <span></span>
+            </div>
+            <section class="hand-section player" aria-labelledby="player-title">
+              <div class="hand-heading">
+                <div class="participant">
+                  <span class="avatar player-avatar" aria-hidden="true"
+                    >J1</span
+                  >
+                  <div>
+                    <h2 id="player-title">
+                      Jugador 1 <span class="you-label">TÚ</span>
+                    </h2>
+                    <p id="turn-hint">La mesa está lista para ti</p>
+                  </div>
+                </div>
+                <div class="score player-score">
+                  <span>PUNTOS</span><strong id="player-score">?</strong>
+                </div>
+              </div>
+              <div class="cards" id="player-cards"></div>
+            </section>
+            <div class="table-bottom">
+              <span aria-hidden="true">♣ &nbsp; ♦ &nbsp; ♠ &nbsp; ♥</span
+              ><span>SIN APUESTAS. SOLO BUENAS JUGADAS.</span>
+            </div>
+          </section>
+
+          <aside class="sidebar" aria-label="Controles del juego">
+            <section class="action-panel" aria-labelledby="action-title">
+              <p class="eyebrow">TU ESTRATEGIA, TU PARTIDA</p>
+              <h2 id="action-title">Vamos a jugar.</h2>
+              <p id="game-message" role="status" aria-live="polite">
+                Todo empieza con dos cartas.<br />¿Listo para probar tu suerte?
+              </p>
+              <button class="button button-primary" id="new-game">
+                <span aria-hidden="true">↻</span> Nuevo juego
+              </button>
+              <div class="secondary-actions">
+                <button class="button button-hit" id="hit" disabled>
+                  <span aria-hidden="true">＋</span> Pedir carta</button
+                ><button class="button button-stand" id="stand" disabled>
+                  <span aria-hidden="true">✋</span> Detener
+                </button>
+              </div>
+              <p class="action-note">
+                <span aria-hidden="true">◇</span> Sin dinero real. Juega a tu
+                ritmo.
+              </p>
+            </section>
+            <div class="sidebar-footer">
+              <span aria-hidden="true">♠</span>
+              <p>La suerte reparte.<br /><em>Tú haces la jugada.</em></p>
+            </div>
+          </aside>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <span>HECHO PARA DISFRUTAR LA PARTIDA</span
+        ><span>21 es el número. Tú pones la estrategia.</span>
+      </footer>
+    </div>
+    <script src="./assets/js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.8/underscore-umd-min.js"></script>
+  </body>
+</html>
